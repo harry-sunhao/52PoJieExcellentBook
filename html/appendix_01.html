@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爱盘——最硬核的破解工具大全</title>
+    <link rel="stylesheet" href="../style/appendix.css">
+    <link rel="stylesheet" href="../style/scroll.css"/>
+    <script src="../script/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('message', function (e) {
+            if (e.data === 'doprint') {
+                window.parent.postMessage("refuseprint", "*");
+            }
+        })
+        $(document).ready(function () {
+            var windowTop=0;
+            $(window).scroll(function() {
+                if($(document).height() < $(window).height() + $(window).scrollTop()+60)return
+                var scrolls = $(this).scrollTop();
+                if(scrolls>=windowTop){
+                    window.parent.postMessage("scrollTop", "*");
+                    windowTop=scrolls;
+                }else{
+                    window.parent.postMessage("unscrollTop", "*");
+                    windowTop=scrolls;
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div class="appendix">附录一</div>
+<div class="title">爱盘——最硬核的破解工具大全</div>
+</body>
+<div>
+    <p>破解软件要用啥？分析病毒怕中招？还在愁找不到破解工具？别担心，爱盘来解君愁！<br>
+    为了给同学们提供最新、最好用的破解工具，吾爱破解论坛专门推出在线破解工具包——『爱盘』，这里面不仅提供了针对各平台软件的常用调试、查壳、分析等工具，更为大家提供了吾爱破解论坛专用虚拟机，从此再也不用怕电脑中招了。另外我们还提供了历年的精品课程和文章。
+        有关爱盘的相关介绍，请点击这里了解。</p>
+
+   <p>那么网址是啥捏？</p>
+    <p>那就请拿好笔和纸记好，爱盘的网址是：</p>
+    <p><a style="font-size: 24px;" href="https://down.52pojie.cn">https://down.52pojie.cn</a></p>
+    <p>如需直接获取工具也可直接访问</p>
+    <p><a style="font-size: 24px;" href="https://down.52pojie.cn/Tools/">https://down.52pojie.cn/Tools</a></p>
+
+
+    <p>爱盘就是这么神奇，还等什么，赶快去看看里面有啥吧！</p>
+</div>
+</html>

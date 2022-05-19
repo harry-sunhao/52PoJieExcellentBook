@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>写在前面</title>
+    <link rel="stylesheet" href="../style/foreword.css"/>
+    <script src="../script/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('message', function (e) {
+            if (e.data === 'doprint') {
+                window.parent.postMessage("refuseprint", "*");
+            }
+        })
+        $(document).ready(function () {
+            var windowTop=0;
+            $(window).scroll(function() {
+                if($(document).height() < $(window).height() + $(window).scrollTop()+60)return
+                var scrolls = $(this).scrollTop();
+                if(scrolls>=windowTop){
+                    window.parent.postMessage("scrollTop", "*");
+                    windowTop=scrolls;
+                }else{
+                    window.parent.postMessage("unscrollTop", "*");
+                    windowTop=scrolls;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="title">写在前面</div>
+<div>
+    <p class="passage1">欢迎浏览《吾爱破解精华集 2021》！这里收录了2021全年吾爱破解论坛的优秀文章。回首2021年，
+        论坛收到了来自118位同学发布的共计<span class="hl1"><strong>208篇</strong></span> 优秀、精华帖（精华帖<span class="hl1"><strong>124</strong></span>篇）。感谢每一位文章作者的无私分享，吾爱破解论坛因你而精彩！希望你们2022年再接再厉！帖子没有被加精华的同学也不要气馁，只要你们肯继续努力，不抛弃不放弃，就一定可以站在C位！
+    </p>
+    <p class="passage2"><strong><span style="color: #1d7db1;font-size: 18px">接下来介绍一下电子书的主要功能。</span></strong><br>
+    <span>1、打开电子书后，请在左侧目录中选取您需要阅读的文章。<br>
+    2、如果觉得左侧目录太宽影响视野的话，可以拖拽目录与正文浏览框之间的分隔线，调整自己认为最合适的宽度。也可以点击<img src="../image/button/tree.png">按钮可显示、隐藏目录。<br>
+    3、俗话说，眼睛是心灵的窗户，长期在白色背景下阅读将会使眼睛疲劳，今年的电子书我为同学们加入了护眼模式，并提供四种暖色，点击<img src="../image/button/eyeprot.png">可以选择你喜欢的护眼色。因作者文章的排版原因，防止出现“刮刮乐”现象，暂不支持深色。<br>
+    4、如果您有某种需要，点击<img src="../image/button/print.png">按钮即可打印当前浏览的文章，支持打印成PDF等虚拟文件（需软件支持）,该功能仅限打印文章正文，主页、前言等页面不能打印。</span></p>
+    <p class="attention1"><span><strong>注意事项</strong></span></p>
+    <p class="attention2" style="margin-bottom: 50px">1、<span class="hl2"><strong>本电子书部分病毒木马分析类文章附带样本文件，供破解爱好者学习。为确保您的信息及财产安全，如需运行或调试样本，务必在虚拟机中进行（点击此处下载吾爱破解专用虚拟机），如果您对该样本不熟悉请勿冒险尝试运行！否则一切后果由个人承担。</strong></span><br>
+    2、关于打印问题，一些有代码的文章可能会因代码框宽度有限而单行代码过长而无法显示，您可以尝试调整打印纸张大小来尽可能显示出无法显示的代码。<br>
+        3、为确保电子书浏览过程中病毒木马样本附件被杀软、电脑管家屡次报毒，文章作者通常对其进行加密打包，解压密码请到文章查找，<span class="hl2"><strong>再次提醒，使用前请注意电脑安全，谨慎操作。</strong></span><br>
+    4、CHM版本的电子书在移动平台上可能会出现页面比例失调、附件无法保存等情况，属正常现象，鉴于大家使用的移动设备各不相同，很难确定开发标准，故不对此进行优化，因兼容问题，打印功能在移动平台不支持使用，为减小电子书本体容量，CHM版本阉割了文章附件，敬请谅解！
+
+    如果大家在使用中有什么疑问或意见建议，欢迎到电子书发布帖回帖留言，如果您没有吾爱破解论坛账号，可以直接通过官方服务邮箱<a href="service@52pojie.cn">service@52pojie.cn</a>来反馈。</p>
+</div>
+
+</body>
+</html>

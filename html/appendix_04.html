@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../style/appendix.css">
+    <link rel="stylesheet" href="../style/thread.css"/>
+    <script src="../script/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('message', function (e) {
+            if (e.data === 'doprint') {
+                window.parent.postMessage("refuseprint", "*");
+            }
+        })
+        $(document).ready(function () {
+            var windowTop=0;
+            $(window).scroll(function() {
+                if($(document).height() < $(window).height() + $(window).scrollTop()+60)return
+                var scrolls = $(this).scrollTop();
+                if(scrolls>=windowTop){
+                    window.parent.postMessage("scrollTop", "*");
+                    windowTop=scrolls;
+                }else{
+                    window.parent.postMessage("unscrollTop", "*");
+                    windowTop=scrolls;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="appendix">附录四</div>
+<div class="title">吾爱破解安卓逆向入门教程--导航帖（2018-06）</div>
+<!--信息栏-->
+<p class="author">原作者：qtfreet00<br>
+<p class="author">发布时间：2015-9-2 23:02<br>
+<p class="author">原帖链接：<a href="https://www.52pojie.cn/thread-408645-1-1.html" target="_blank">https://www.52pojie.cn/thread-408645-1-1.html</a></p><br>
+<div>
+    <div style="margin-left: 30px ; margin-right: 30px>
+<br />
+<font face="微软雅黑"><font size="3"><strong><strong><font color="Blue">1.吾爱<a href="https://www.52pojie.cn" target="_blank" class="relatedlink">破解</a>安卓逆向入门教程（一）---环境配置<br />
+
+    <br />
+
+    <a href="http://www.52pojie.cn/thread-395378-1-1.html" target="_blank">http://www.52pojie.cn/thread-395378-1-1.html</a><br />
+
+    <br />
+
+    <br />
+
+    2.<a href="https://www.52pojie.cn" target="_blank" class="relatedlink">吾爱破解</a>安卓逆向入门教程（二）---初识APK、Dalvik字节码以及Smali <br />
+
+    <br />
+
+    <a href="http://www.52pojie.cn/thread-395689-1-1.html" target="_blank">http://www.52pojie.cn/thread-395689-1-1.html</a><br />
+
+    <br />
+
+    <br />
+
+    3.吾爱破解安卓逆向入门教程（三）---深入Smali文件<br />
+
+    <br />
+
+    <a href="http://www.52pojie.cn/thread-396966-1-1.html" target="_blank">http://www.52pojie.cn/thread-396966-1-1.html</a><br />
+
+    <br />
+
+    <br />
+
+    4.吾爱破解安卓逆向入门教程（四）---Smali函数分析<br />
+
+    <br />
+
+    <a href="http://www.52pojie.cn/thread-397858-1-1.html" target="_blank">http://www.52pojie.cn/thread-397858-1-1.html</a><br />
+
+    <br />
+
+    <br />
+
+    5.吾爱破解安卓逆向入门教程（五）---Smali实战分析<br />
+
+    <br />
+
+    <a href="http://www.52pojie.cn/thread-397987-1-1.html" target="_blank">http://www.52pojie.cn/thread-397987-1-1.html</a><br />
+
+    <br />
+
+    <br />
+
+    6.吾爱破解安卓逆向入门教程（六）---了解JAVA反编译工具<br />
+
+    <br />
+
+    <a href="http://www.52pojie.cn/thread-404285-1-1.html" target="_blank">http://www.52pojie.cn/thread-404285-1-1.html</a><br />
+
+    <br />
+
+    <br />
+
+    7.吾爱破解安卓逆向入门教程（七）--- 了解JEB和IDA使用<br />
+
+    <a href="http://www.52pojie.cn/thread-414414-1-1.html" target="_blank">http://www.52pojie.cn/thread-414414-1-1.html</a></font></strong></strong></font></font><br />
+
+    <font face="微软雅黑"><font size="3"><strong><strong><font color="Blue"><br />
+
+    </font></strong></strong></font></font><br />
+
+    <br />
+
+    <img src="./0.png"><br />
+
+    <br />
+
+    <img src="./1.png"><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong><strong><br />
+
+        <font color="#0000ff"><br />
+
+        </font><br />
+
+        <font color="#0000ff">会飞的丑小鸭-叫我兄弟学逆向教程</font><br />
+
+        <font color="#0000ff"><br />
+
+        </font>1.《教我兄弟学Android逆向01 编写第一个Android程序》</strong></strong></font></font><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong><strong><a href="https://www.52pojie.cn/thread-648530-1-1.html" target="_blank">https://www.52pojie.cn/thread-648530-1-1.html</a></strong></strong></font></font><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong><strong>2.《教我兄弟学Android逆向02 破解第一个Android程序 》</strong></strong></font></font><br />
+
+    <font face="微软雅黑"><font size="3"><strong><strong><a href="https://www.52pojie.cn/thread-650395-1-1.html" target="_blank">https://www.52pojie.cn/thread-650395-1-1.html</a></strong></strong></font></font><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong><strong>3.《教我兄弟学Android逆向03 破解第一个Android游戏 》</strong></strong></font></font><br />
+
+    <font face="微软雅黑"><font size="3"><strong><strong><a href="https://www.52pojie.cn/thread-654654-1-1.html" target="_blank">https://www.52pojie.cn/thread-654654-1-1.html</a></strong></strong></font></font><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong><strong>4.《教我兄弟学Android逆向04 动态调试smali代码 》</strong></strong></font></font><br />
+
+    <font face="微软雅黑"><font size="3"><strong><strong> <a href="https://www.52pojie.cn/thread-658865-1-1.html" target="_blank">https://www.52pojie.cn/thread-658865-1-1.html</a></strong></strong></font></font><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong><strong>5.《教我兄弟学Android逆向05 在smali代码中插入Log 》</strong></strong></font></font><br />
+
+    <strong><strong><font size="3"><a href="https://www.52pojie.cn/thread-665362-1-1.html" target="_blank">https://www.52pojie.cn/thread-665362-1-1.html</a></font></strong></strong><br />
+
+    <br />
+
+    <font size="3"><strong><br />
+
+        <strong><strong>6.</strong></strong>《教我兄弟学Android逆向06 用AndroidStudio编写第一个so》<br />
+
+        <a href="https://www.52pojie.cn/thread-706568-1-1.html" target="_blank">https://www.52pojie.cn/thread-706568-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong><strong>7.</strong></strong></strong>《教我兄弟学Android逆向番外01 apktool的使用》<br />
+
+        <a href="https://www.52pojie.cn/thread-732007-1-1.html" target="_blank">https://www.52pojie.cn/thread-732007-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong><strong>8.</strong></strong></strong>《教我兄弟学Android逆向07 IDA破解第一个so》<br />
+
+        <a href="https://www.52pojie.cn/thread-732298-1-1.html" target="_blank">https://www.52pojie.cn/thread-732298-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong><strong>9.</strong></strong></strong>《教我兄弟学Android逆向08 IDA爆破签名验证》<br />
+
+        <a href="https://www.52pojie.cn/thread-732955-1-1.html" target="_blank">https://www.52pojie.cn/thread-732955-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong><strong>10.</strong></strong></strong>《教我兄弟学Android逆向番外02 jeb工具的使用》<br />
+
+        <a href="https://www.52pojie.cn/thread-742250-1-1.html" target="_blank">https://www.52pojie.cn/thread-742250-1-1.html</a></strong></font><font size="3"><strong><br />
+
+    <br />
+
+    <strong><strong>11.</strong></strong><strong><br />
+
+        《教我兄弟学Android逆向番外03 Android逆向必会命令》</strong><br />
+
+    <a href="https://www.52pojie.cn/thread-742284-1-1.html" target="_blank">https://www.52pojie.cn/thread-742284-1-1.html</a><br />
+
+    <br />
+
+    <strong><strong><strong>12.</strong></strong></strong>《教我兄弟学Android逆向09 IDA动态破解登陆验证》<br />
+
+    <a href="https://www.52pojie.cn/thread-742686-1-1.html" target="_blank">https://www.52pojie.cn/thread-742686-1-1.html</a><br />
+
+    <br />
+
+    <strong><strong><strong>13.</strong></strong></strong>《教我兄弟学Android逆向系列课程+附件导航帖》 <br />
+
+    <a href="https://www.52pojie.cn/thread-742703-1-1.html" target="_blank">https://www.52pojie.cn/thread-742703-1-1.html</a></strong></font><br />
+
+    <br />
+
+    <img src="./2.png"><br />
+
+    <br />
+
+    <br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><font color="#0000ff"><strong>BubblePig Android逆向笔记</strong></font></font></font><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong>1.Android逆向-java代码基础（2）</strong></font></font><br />
+
+    <strong><font size="3"><a href="https://www.52pojie.cn/thread-684492-1-1.html" target="_blank">https://www.52pojie.cn/thread-684492-1-1.html</a></font></strong><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong>2.Android逆向-java代码基础（4） </strong></font></font><br />
+
+    <font face="微软雅黑"><font size="3"><strong><a href="https://www.52pojie.cn/thread-685752-1-1.html" target="_blank">https://www.52pojie.cn/thread-685752-1-1.html</a></strong></font></font><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong>3.android逆向-ARM汇编基础-非虫笔记 </strong></font></font><br />
+
+    <font face="微软雅黑"><font size="3"><strong><a href="https://www.52pojie.cn/thread-673175-1-1.html" target="_blank">https://www.52pojie.cn/thread-673175-1-1.html</a></strong></font></font><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong>4.IDA apk静态调试（非虫笔记）</strong></font></font><br />
+
+    <font face="微软雅黑"><font size="3"><strong><a href="https://www.52pojie.cn/thread-672885-1-1.html" target="_blank">https://www.52pojie.cn/thread-672885-1-1.html</a></strong></font></font><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong>5.Android逆向-python写一个.class分析辅助脚本</strong></font></font><br />
+
+    <font face="微软雅黑"><font size="3"><strong><a href="https://www.52pojie.cn/thread-687475-1-1.html" target="_blank">https://www.52pojie.cn/thread-687475-1-1.html</a></strong></font></font><br />
+
+    <br />
+
+    <font face="微软雅黑"><font size="3"><strong>6.Android逆向-java代码基础（6）</strong></font></font><br />
+
+    <font face="微软雅黑"><font size="3"><strong><a href="https://www.52pojie.cn/thread-689279-1-1.html" target="_blank">https://www.52pojie.cn/thread-689279-1-1.htm</a>l</strong></font></font><br />
+
+    <br />
+
+    <strong><font size="3">7.Android逆向-java代码基础（7）</font></strong><br />
+
+    <strong><font size="3"> <a href="https://www.52pojie.cn/thread-689936-1-1.html" target="_blank">https://www.52pojie.cn/thread-689936-1-1.html</a></font></strong><br />
+
+    <br />
+
+    <strong><font size="3">8.Android逆向-java代码基础（8）</font></strong><br />
+
+    <strong><font size="3"><a href="https://www.52pojie.cn/thread-690542-1-1.html" target="_blank">https://www.52pojie.cn/thread-690542-1-1.html</a></font></strong><br />
+
+    <font size="3"><strong><br />
+
+        9.Android逆向-Android基础逆向9（so相关学习干货)<br />
+
+        <a href="https://www.52pojie.cn/thread-699268-1-1.html" target="_blank">https://www.52pojie.cn/thread-699268-1-1.html</a><br />
+
+        <br />
+
+        10.Android逆向-Android逆向基础10（so逻辑分析）<br />
+
+        <a href="https://www.52pojie.cn/thread-699522-1-1.html" target="_blank">https://www.52pojie.cn/thread-699522-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong>11.</strong></strong>Android逆向-Android逆向基础11（so demo分析）<br />
+
+        <a href="https://www.52pojie.cn/thread-699961-1-1.html" target="_blank">https://www.52pojie.cn/thread-699961-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong>12.</strong></strong>Android逆向——Android逆向进阶（1）<br />
+
+        <a href="https://www.52pojie.cn/thread-700418-1-1.html" target="_blank">https://www.52pojie.cn/thread-700418-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong>13.</strong></strong>Android逆向——Android逆向进阶（2）<br />
+
+        <a href="https://www.52pojie.cn/thread-701040-1-1.html" target="_blank">https://www.52pojie.cn/thread-701040-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong>14.</strong></strong>Android逆向——Android逆向进阶（3）<br />
+
+        <a href="https://www.52pojie.cn/thread-702072-1-1.html" target="_blank">https://www.52pojie.cn/thread-702072-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong>15.</strong></strong>Android逆向——Android逆向进阶（4）<br />
+
+        <a href="https://www.52pojie.cn/thread-702071-1-1.html" target="_blank">https://www.52pojie.cn/thread-702071-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong>16.</strong></strong>Android逆向进阶-ELF文件分析（2）<br />
+
+        <a href="https://www.52pojie.cn/thread-705085-1-1.html" target="_blank">https://www.52pojie.cn/thread-705085-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong>17.</strong></strong>Android逆向进阶-ELF文件分析（3）<br />
+
+        <a href="https://www.52pojie.cn/thread-705159-1-1.html" target="_blank">https://www.52pojie.cn/thread-705159-1-1.html</a><br />
+
+        <br />
+
+        <strong><strong>18.</strong></strong>Android逆向——smali复杂类解析<br />
+
+        <a href="https://www.52pojie.cn/thread-746008-1-1.html" target="_blank">https://www.52pojie.cn/thread-746008-1-1.html</a><br />
+
+    </strong></font><strong><font size="3"><br />
+
+</font></strong></div>
+</div>
+</body>
+</html>

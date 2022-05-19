@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎</title>
+    <link rel="stylesheet" href="../style/homepage.css"/>
+    <link rel="stylesheet" href="../style/scroll.css"/>
+    <script src="../script/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('message', function (e) {
+            if (e.data === 'doprint') {
+                window.parent.postMessage("refuseprint", "*");
+            }
+        })
+        $(document).ready(function () {
+            var windowTop=0;
+            $(window).scroll(function() {
+                if($(document).height() < $(window).height() + $(window).scrollTop()+60)return
+                var scrolls = $(this).scrollTop();
+                if(scrolls>=windowTop){
+                    window.parent.postMessage("scrollTop", "*");
+                    windowTop=scrolls;
+                }else{
+                    window.parent.postMessage("unscrollTop", "*");
+                    windowTop=scrolls;
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div class="title">风雨十四载  感谢君陪伴</div>
+<li>◆这里收录了吾爱破解论坛的会员们2021年的优秀文章。</li>
+<li>◆感谢每一位文章作者的无私分享，吾爱破解论坛因你而精彩！</li>
+<li>◆没有被作为优秀文章收录的会员请不要灰心，继续努力，下一篇被收录的文章或许是你的。加油！</li>
+<li>◆同时要感谢每一位会员14年以来的陪伴！你的支持，是我们前进的动力！</li>
+<div>如果您对《吾爱破解精华集》系列电子书有什么意见或好的建议，欢迎反馈！<br>
+    电子书制作/整理：<a href="https://www.52pojie.cn/home.php?mod=space&uid=368698" target="_blank">烟99</a><br>
+    论坛主页：<a href="https://www.52pojie.cn/" target="_blank">https://www.52pojie.cn</a>
+    <span style="margin-left: 50px">反馈邮箱：<a href="mailto:service@52pojie.cn" target="_blank">service@52pojie.cn</a></span>
+    <div class="qrcode"><img src="../image/homepage/bilibili.png"><br>吾爱破解B站主页</div>
+    <div class="qrcode"><img src="../image/homepage/wx.png"><br>吾爱破解微信公众号</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后记</title>
+    <link rel="stylesheet" href="../style/foreword.css"/>
+    <script src="../script/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('message', function (e) {
+            if (e.data === 'doprint') {
+                window.parent.postMessage("refuseprint", "*");
+            }
+        })
+        $(document).ready(function () {
+            var windowTop=0;
+            $(window).scroll(function() {
+                if($(document).height() < $(window).height() + $(window).scrollTop()+60)return
+                var scrolls = $(this).scrollTop();
+                if(scrolls>=windowTop){
+                    window.parent.postMessage("scrollTop", "*");
+                    windowTop=scrolls;
+                }else{
+                    window.parent.postMessage("unscrollTop", "*");
+                    windowTop=scrolls;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="title">结束语</div>
+<div>
+    <p class="passage1">要和大家说声对不起了，2021版精华集原定于今年3月13日以吾爱破解论坛14周年纪念日特别企划的方式发布，很不巧突如其来的奥密克戎疫情导致我的故乡全程封控（<a href="https://t.bilibili.com/636751488953090101?tab=2" target="_blank">稍早前发布的情况说明</a>），被封在了公司里，不能回家，无法完成最后的收尾工作，经过了20天的等待，终于迎来了解封，但又因解封后工作繁忙才不得以拖延到今天才发布。
+    </p>
+    <p class="passage1">这是我接坑精华集以来的第三个年头，非常感谢<a href="https://www.52pojie.cn/home.php?mod=space&uid=1" target="_blank">@Hmily</a>&nbsp三年来对我的大力支持，同时感谢<a href="https://www.52pojie.cn/home.php?mod=space&uid=879080" target="_blank">@涛之雨</a>&nbsp对电子书进行了各种技术优化，同样也感谢曾经回答过我提出的有关前端问题的会员！</p>
+    <p class="passage1">最后，我们共同期待《吾爱破解精华集 2022》，期待你的精彩表现！</p>
+</div>
+</body>
+</html>

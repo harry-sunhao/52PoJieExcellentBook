@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../style/appendix.css">
+    <link rel="stylesheet" href="../style/thread.css"/>
+    <script src="../script/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('message', function (e) {
+            if (e.data === 'doprint') {
+                window.parent.postMessage("refuseprint", "*");
+            }
+        })
+        $(document).ready(function () {
+            var windowTop=0;
+            $(window).scroll(function() {
+                if($(document).height() < $(window).height() + $(window).scrollTop()+60)return
+                var scrolls = $(this).scrollTop();
+                if(scrolls>=windowTop){
+                    window.parent.postMessage("scrollTop", "*");
+                    windowTop=scrolls;
+                }else{
+                    window.parent.postMessage("unscrollTop", "*");
+                    windowTop=scrolls;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="appendix">附录六</div>
+<div class="title">吾爱破解论坛历年优秀、精华文章集锦</div>
+<div>
+    <p>
+        本附录列举了吾爱破解论坛历年原创内容汇总帖的链接有需要的同学可直接点击学习。
+    </p>
+
+    <p style="text-indent: 0em">
+        【权威发布】吾爱破解论坛2020年优秀、精华TOP榜（上）<br>
+        <a href="https://www.52pojie.cn/thread-1349274-1-1.html" target="_blank">https://www.52pojie.cn/thread-1349274-1-1.html</a><br><br>
+        【权威发布】吾爱破解论坛2020年原创区、悬赏值TOP榜（下）<br>
+        <a href="https://www.52pojie.cn/thread-1356509-1-1.html" target="_blank">https://www.52pojie.cn/thread-1356509-1-1.html</a><br><br>
+        【权威发布】吾爱破解论坛2019年优秀、精华TOP榜（上）<br>
+        <a href="https://www.52pojie.cn/thread-1090258-1-1.html" target="_blank">https://www.52pojie.cn/thread-1090258-1-1.html</a><br><br>
+        【权威发布】吾爱破解论坛2019年原创区TOP榜（下）<br>
+        <a href="https://www.52pojie.cn/thread-1091297-1-1.html" target="_blank">https://www.52pojie.cn/thread-1091297-1-1.html</a><br><br>
+        【权威发布】吾爱破解论坛2018年优秀、精华TOP榜（上）<br>
+        <a href="https://www.52pojie.cn/thread-854497-1-1.html" target="_blank">https://www.52pojie.cn/thread-854497-1-1.html</a><br><br>
+        【权威发布】吾爱破解论坛2018年原创区TOP榜（下）<br>
+        <a href="https://www.52pojie.cn/thread-857334-1-1.html" target="_blank">https://www.52pojie.cn/thread-857334-1-1.html</a><br><br>
+        【权威发布】吾爱破解论坛2017年优秀、精华TOP榜（上）<br>
+        <a href="https://www.52pojie.cn/thread-683246-1-1.html" target="_blank">https://www.52pojie.cn/thread-683246-1-1.html</a><br><br>
+        【权威发布】吾爱破解论坛2017年原创区TOP榜（下）<br>
+        <a href="https://www.52pojie.cn/thread-686063-1-1.html" target="_blank">https://www.52pojie.cn/thread-686063-1-1.html</a><br><br>
+        【权威发布】吾爱破解论坛2016年原创、精华TOP榜<br>
+        <a href="https://www.52pojie.cn/thread-571243-1-1.html" target="_blank">https://www.52pojie.cn/thread-571243-1-1.html</a><br><br>
+    </p>
+</div>
+</body>
+</html>
