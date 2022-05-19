@@ -5,5 +5,11 @@
   "main": "server.js",
   "author": {
     "name": "Harry"
+  },
+  "scripts": {
+    "build": ""
+  },
+  "dependencies": {
+    "asar": "^3.1.0"
   }
 }
