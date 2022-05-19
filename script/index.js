@@ -1,21 +1,17 @@
 //---------------------------------------
 // 此处是工具栏各按钮的操作函数
-
 try {
-  const { remote } = require('electron')
-} catch {
-	
+    const { remote } = require('electron')
+} catch (error) {
+    console.error(error);
 }
 window.onload=function () {
-	try {
-	const win = remote.getCurrentWindow();
-	win.setSize(1000, 1000);
-	//win.setTitle("吾爱破解精华集 2021 v1.0 2022年5月19日19:07:41");
-} catch {
-	
-}
-
     $("#threadframe").attr('src', 'html/homepage.html');
+
+    const win = remote.getCurrentWindow();
+    win.setSize(800, 600);
+    win.setTitle("吾爱破解精华集 2021 v1.0 2022年5月19日19:07:41");
+
 
     var frameWidow = $("#threadframe")[0].contentWindow;
     $(frameWidow).scroll(function(e){
@@ -359,8 +355,7 @@ window.addEventListener('message', function (e) {
         printreject();
     } else if (e.data === 'scrollTop') {
         collapse();
-    }
-    else if (e.data === 'unscrollTop'){
+    } else if (e.data === 'unscrollTop'){
         uncollapse();
     } else if (e.data === 'dowecheat') {
         showWecheat();
@@ -368,8 +363,8 @@ window.addEventListener('message', function (e) {
         showbilibili();
     } else if (e.data === 'docontact') {
         contactme();
-    } else {                                              //接收子框架发来的tid
-        var s = e.data;
+    } else if (e.data.data === 'outattachURL'){     //接收子框架发来的tid
+        var s = e.data.value;
         outattachdown(s);
     }
 })

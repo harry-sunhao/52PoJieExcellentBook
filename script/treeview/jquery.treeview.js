@@ -161,28 +161,6 @@
 
             this.data("toggler", toggler);
 
-            function serialize() {
-                function binary(arg) {
-                    return arg ? 1 : 0;
-                }
-
-                var data = [];
-                branches.each(function (i, e) {
-                    data[i] = $(e).is(":has(>ul:visible)") ? 1 : 0;
-                });
-                $.cookie(settings.cookieId, data.join(""), settings.cookieOptions);
-            }
-
-            function deserialize() {
-                var stored = $.cookie(settings.cookieId);
-                if (stored) {
-                    var data = stored.split("");
-                    branches.each(function (i, e) {
-                        $(e).find(">ul")[parseInt(data[i]) ? "show" : "hide"]();
-                    });
-                }
-            }
-
             // add treeview class to activate styles
             this.addClass("treeview");
 
@@ -191,14 +169,6 @@
 
             switch (settings.persist) {
                 case "cookie":
-                    var toggleCallback = settings.toggle;
-                    settings.toggle = function () {
-                        serialize();
-                        if (toggleCallback) {
-                            toggleCallback.apply(this, arguments);
-                        }
-                    };
-                    deserialize();
                     break;
                 case "location":
                     var current = this.find("a").filter(function () {
