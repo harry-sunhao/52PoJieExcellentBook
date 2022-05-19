@@ -1,7 +1,11 @@
 //---------------------------------------
 // 此处是工具栏各按钮的操作函数
-const { remote } = require('electron')
 
+try {
+  const { remote } = require('electron')
+} catch (error) {
+  console.error(error);
+}
 window.onload=function () {
 	const win = remote.getCurrentWindow();
 	win.setSize(1000, 1000);
