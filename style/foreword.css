@@ -1,0 +1,59 @@
+/*超链接颜色控制*/
+a{
+    transition: .5s;
+}
+a:link {
+    color: #1373ca; /*正常*/
+}
+
+a:visited {
+    color: #1373ca; /*已浏览*/
+}
+
+a:hover {
+    color: #ff0000; /*当前*/
+}
+
+a:active {
+    color: #ff0000; /*鼠标滑过*/
+}
+img{
+    vertical-align: middle;
+    border: .5px solid #6b6b6b;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.title{
+    font-size: 36px;
+    color: #c40030;
+    text-align: center;
+    margin: 30px 10px 60px 10px;
+    border-bottom: 1.5px solid #6b6b6b;
+    padding-bottom: 10px
+}
+.passage1{
+    line-height: 25px;
+    text-indent: 2em;
+}
+.passage2{
+    line-height: 25px;
+    margin: 30px 30px 10px 30px;
+ }
+.attention1{
+    margin: 30px auto 20px 20px;
+    font-size: 24px;
+    color: #ff0000;
+}
+.attention2{
+    line-height: 25px;
+    margin: 10px auto 20px 20px;
+ }
+.hl1{
+    font-size: 22px;
+    color: #0099CC;
+}
+.hl2{
+     font-size: 22px;
+     color: #ff0000;
+ }

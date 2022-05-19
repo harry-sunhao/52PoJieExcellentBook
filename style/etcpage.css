@@ -1,0 +1,30 @@
+.shape_etcpagetitle {
+    background-color: #00abff;
+    border-radius: 15px;
+    border: 2px solid #a1a1a1;
+    width: 80px;
+    height: 50px;
+    margin-left: -40px;
+    float: left;
+
+}
+
+.etcpagetitle {
+    color: red;
+    font-family: "Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-left: 60px;
+    border-bottom: 5px solid #949494;
+    padding-bottom: 3px;
+    width: 500px;
+}
+
+.paragraph {
+    text-indent: 2em;
+    line-height: 1.5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}

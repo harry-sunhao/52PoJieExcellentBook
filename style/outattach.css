@@ -1,0 +1,60 @@
+div{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.filename{
+    background-repeat: no-repeat;
+    background-position-y: center;
+    padding: 20px 20px 20px 40px;
+    height: 50px;
+}
+.zip{
+    background-image: url('../image/filetype/zip.gif');
+}
+.rar{
+     background-image: url('../image/filetype/rar.gif');
+ }
+.text{
+    background-image: url('../image/filetype/text.gif');
+}
+.apk{
+    background-image: url('../image/filetype/apk.gif');
+}
+.unknown{
+    background-image: url('../image/filetype/unknown.gif');
+}
+/*此处为按钮正常状态的效果*/
+.save {
+    color: #494949;
+    border: 1px solid #494949;
+    padding: 4px 8px;
+    border-radius: 18px;
+    text-decoration: none;
+    float: right;
+    cursor: pointer;
+    transition: .5s;
+}
+/*此处为按钮高亮状态的效果*/
+.save:hover {
+    background-color: #494949;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 18px;
+    text-decoration: none;
+}
+.fileobject{
+    border: transparent .5px dashed;
+    margin: 20px 20px 20px 20px;
+    padding: 10px 10px 10px 10px;
+}
+.fileobject:hover{
+    border: #2f3238 .5px dashed;
+    background: #eeeeee;
+    transition: .3s;
+}
+.size{
+    text-indent: 1em;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}

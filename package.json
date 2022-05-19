@@ -1,0 +1,9 @@
+{
+  "name": "52PoJieExcellentBook2021",
+  "version": "1.0.1",
+  "description": "52PoJieExcellentBook2021",
+  "main": "server.js",
+  "author": {
+    "name": "Harry"
+  }
+}

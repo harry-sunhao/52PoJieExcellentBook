@@ -1,0 +1,39 @@
+/*超链接颜色控制*/
+a{
+    transition: .5s;
+}
+a:link {
+    color: #1373ca; /*正常*/
+}
+
+a:visited {
+    color: #1373ca; /*已浏览*/
+}
+
+a:hover {
+    color: #ff0000; /*当前*/
+}
+
+a:active {
+    color: #ff0000; /*鼠标滑过*/
+}
+p{
+    margin-left: 30px;
+    margin-right: 30px;
+    line-height: 25px;
+    text-indent: 2em;
+}
+.appendix {
+    color: #133747;
+    font-size: larger;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+.title{
+    font-size: 36px;
+    color: #c40030;
+    text-align: center;
+    margin: 30px 10px 60px 10px;
+    border-bottom: 1.5px solid #6b6b6b;
+    padding-bottom: 10px
+}

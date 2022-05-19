@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 禁止移动设备双击缩放 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta charset="UTF-8">
+    <title>吾爱破解精华集 2021</title>
+    <!--引用jQuery库，版本号：1.9.1-->
+    <script type="text/javascript" src="script/jquery-1.9.1.min.js"></script>
+    <!--引用layui库及其CSS基础样式-->
+    <script type="text/javascript" src="script/layer.js"></script>
+    <link rel="stylesheet" href="style/layer.css">
+    <!--引用电子书主页CSS样式-->
+    <link rel="stylesheet" href="style/index.css">
+    <!--引用美化滚动条的CSS样式-->
+    <link rel="stylesheet" href="style/scroll.css">
+    <!--此处为左侧目录树需要引用的文件-->
+    <link rel="stylesheet" href="style/treeview/jquery.treeview.css">
+    <link rel="stylesheet" href="style/treeview/screen.css">
+    <script type="text/javascript" src="script/treeview/jquery.treeview.js"></script>
+    <script type="text/javascript" src="script/treeview/jquery.cookie.js"></script>
+    <!--此处为横屏提示库-->
+    <script type="text/javascript" src="script/landscape.js"></script>
+    <!--此处为主界面所有JavaScript脚本-->
+    <script type="text/javascript" src="script/index.js"></script>
+</head>
+
+<body>
+    <div id="book" class="pagebody">
+        <!--标题头部及工具栏-->
+        <div class="head">
+            <div class="blank1"></div>
+            <img src="image/2021.png" class="jinghuaji">
+            <div class="blank2"></div>
+            <img src="image/logo.png" id="logoimg">
+            <div class="blank3"></div>
+            <div class="head_right">
+                <ul>
+                    <li><a class="btn_homepage" href="javascript:gethomepage()"></a></li>
+                    <li><a class="btn_fullscreen" href="javascript:dofullscreen()"></a></li>
+                    <li><a class="btn_tree" href="javascript:treeexpant()"></a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a class="btn_eyeprot" href="javascript:eyeprot()"></a>
+                        <div class="eyeprotchoose">
+                            <a id="colornone" style="background-color: #ffffff; background-image: url('image/button/eyeprot_none.png');background-repeat: no-repeat;" href="javascript:changeNone()"></a>
+                            <a id="colorgreen" style="background-color: #cce8cf" href="javascript:changeGreen()"></a>
+                            <a id="colorblue" style="background-color: #dce2f1" href="javascript:changeBlue()"></a>
+                            <a id="colorred" style="background-color: #fde6e0" href="javascript:changeRed()"></a>
+                            <a id="coloryellow" style="background-color: #faf9de" href="javascript:changeYellow()"></a>
+                        </div>
+                    </li>
+                    <li><a class="btn_print" href="javascript:threadprint()"></a></li>
+                    <li><a class="btn_about" href="javascript:showabout()"></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--目录树与文章浏览框-->
+        <div class="thread">
+            <div class="thread_body">
+                <!-- 目录拖拽遮罩 -->
+                <div class="thread_darg_cover"></div>
+                <!--目录树-->
+                <div class="thread_tree">
+                    <ul style="margin-top: 10px" id="browser" class="filetree">
+                        <li class=""><span class="folder">吾爱破解精华集 2021</span>
+                            <ul id="folder0000">
+                                <li><span class="file"><a href="html/homepage.html" target="threadtarget">主页</a></span></li>
+                                <li><span class="file"><a href="html/foreword.html" target="threadtarget">前言</a></span></li>
+                                <li class="closed"><span class="folder">文章正文</span>
+                                    <ul>
+                                        <li class="closed"><span class="folder">【脱壳破解类】</span>
+                                            <ul id="folder31">
+                                                <li><span class="file"><a href="thread/1344654/thread.html" target="threadtarget">浅谈Themida 3.0.4.0 x32 IAT修复</a></span></li>
+                                                <li><span class="file"><a href="thread/1345201/thread.html" target="threadtarget">Anti-Bot安全SDK SGAVMP浅析</a></span></li>
+                                                <li><span class="file"><a href="thread/1358649/thread.html" target="threadtarget">玩玩破解，写给新人看（第一集）</a></span></li>
+                                                <li><span class="file"><a href="thread/1359928/thread.html" target="threadtarget">浅谈ZProtect 1.4.9.0 IAT修复</a></span></li>
+                                                <li><span class="file"><a href="thread/1362431/thread.html" target="threadtarget">简明、现代而优雅的破解技术笔记（一）</a></span></li>
+                                                <li><span class="file"><a href="thread/1367918/thread.html" target="threadtarget">利用活跃变量分析来去掉vmp的大部分垃圾指令</a></span></li>
+                                                <li><span class="file"><a href="thread/1371275/thread.html" target="threadtarget">MacOS-微信逆向分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1372133/thread.html" target="threadtarget">手把手教你玩转macOS CrackMe破解五步走</a></span></li>
+                                                <li><span class="file"><a href="thread/1372782/thread.html" target="threadtarget">基于JIT定位.Net软件的代码位置</a></span></li>
+                                                <li><span class="file"><a href="thread/1373493/thread.html" target="threadtarget">跟着小菜鸡一起做CTF(一)</a></span></li>
+                                                <li><span class="file"><a href="thread/1378475/thread.html" target="threadtarget">SimpleDpack_C++编写32位与64位shellcode压缩壳_PE结构与壳的原理讲解</a></span></li>
+                                                <li><span class="file"><a href="thread/1397926/thread.html" target="threadtarget">售电管理软件的分析及破解</a></span></li>
+                                                <li><span class="file"><a href="thread/1416055/thread.html" target="threadtarget">CVE-2020-0601分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1417678/thread.html" target="threadtarget">MRCTF2021逆向题解</a></span></li>
+                                                <li><span class="file"><a href="thread/1419930/thread.html" target="threadtarget">一道反调试小题分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1430044/thread.html" target="threadtarget">看雪CTF逆向练习题-[直言直语] 难度181</a></span></li>
+                                                <li><span class="file"><a href="thread/1437363/thread.html" target="threadtarget">[DC29 Quals] Reverse-Tiamat WriteUp</a></span></li>
+                                                <li><span class="file"><a href="thread/1440685/thread.html" target="threadtarget">中星睿典信息技术考试V2021注册流程分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1445389/thread.html" target="threadtarget">逆向OmniGraffle并编写注册机[Python](附带注册机源码)</a></span></li>
+                                                <li><span class="file"><a href="thread/1451438/thread.html" target="threadtarget">Internet Download Manager 序列号算法逆向并编写注册机</a></span></li>
+                                                <li><span class="file"><a href="thread/1459729/thread.html" target="threadtarget">InnoExtractor 捐赠机制</a></span></li>
+                                                <li><span class="file"><a href="thread/1464030/thread.html" target="threadtarget">【MacOS】SteerMouse 5.5.6 注册算法分析 新增一处暗桩校验</a></span></li>
+                                                <li><span class="file"><a href="thread/1477462/thread.html" target="threadtarget">某壁纸网站js逆向，涉及ob混淆，滑块</a></span></li>
+                                                <li><span class="file"><a href="thread/1479607/thread.html" target="threadtarget">某验滑块加密分析(上)</a></span></li>
+                                                <li><span class="file"><a href="thread/1485179/thread.html" target="threadtarget">震惊！他居然用控制台自动植入JS实现某度破解！</a></span></li>
+                                                <li><span class="file"><a href="thread/1486705/thread.html" target="threadtarget">某验滑块加密分析下</a></span></li>
+                                                <li><span class="file"><a href="thread/1487197/thread.html" target="threadtarget">基于Mono注入 保存你画我猜历史房间数据</a></span></li>
+                                                <li><span class="file"><a href="thread/1487624/thread.html" target="threadtarget">【MYSQL】UDF命令执行靶场 wp</a></span></li>
+                                                <li><span class="file"><a href="thread/1487959/thread.html" target="threadtarget">某网站心跳包参数加密的wasm分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1488919/thread.html" target="threadtarget">基于IDA Python的OLLVM反混淆(二) 实战腾讯御安全(模拟器)</a></span></li>
+                                                <li><span class="file"><a href="thread/1490295/thread.html" target="threadtarget">记一道自写VM的CrackMe WriteUp</a></span></li>
+                                                <li><span class="file"><a href="thread/1491068/thread.html" target="threadtarget">x86反混淆IDA Python脚本 (一)</a></span></li>
+                                                <li><span class="file"><a href="thread/1492577/thread.html" target="threadtarget">某德地图矢量瓦片逆向(快速wasm逆向)，c/c++/c#可调用，执行wasm2c翻译出来的c代码一</a></span></li>
+                                                <li><span class="file"><a href="thread/1494281/thread.html" target="threadtarget">Android APKjiagu</a></span></li>
+                                                <li><span class="file"><a href="thread/1496099/thread.html" target="threadtarget">利用机器学习分析vmp的思路</a></span></li>
+                                                <li><span class="file"><a href="thread/1496276/thread.html" target="threadtarget">小白实战分析一个CrackMe</a></span></li>
+                                                <li><span class="file"><a href="thread/1496415/thread.html" target="threadtarget">某电子商务生态链平台登陆 Form Data 加密逻辑分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1498101/thread.html" target="threadtarget">【CTF】漏洞挖掘XXE wp</a></span></li>
+                                                <li><span class="file"><a href="thread/1502071/thread.html" target="threadtarget">【CTF】MSF和Impacket后渗透拿域控</a></span></li>
+                                                <li><span class="file"><a href="thread/1502997/thread.html" target="threadtarget">移除ollvm中的控制流平坦化、不透明谓词</a></span></li>
+                                                <li><span class="file"><a href="thread/1511745/thread.html" target="threadtarget">某店登陆加密参数 UA 加密逻辑分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1512089/thread.html" target="threadtarget">手脱花指令及IDA脚本编写</a></span></li>
+                                                <li><span class="file"><a href="thread/1520945/thread.html" target="threadtarget">加壳原理笔记01：PE头格式、加载、导入表、重定位</a></span></li>
+                                                <li><span class="file"><a href="thread/1521480/thread.html" target="threadtarget">某鹅滑块验证码破解笔记</a></span></li>
+                                                <li><span class="file"><a href="thread/1522882/thread.html" target="threadtarget">PHP扩展加密逆向初探</a></span></li>
+                                                <li><span class="file"><a href="thread/1530460/thread.html" target="threadtarget">猿人学 web第二题混淆对抗 2021-10-18</a></span></li>
+                                                <li><span class="file"><a href="thread/1540727/thread.html" target="threadtarget">陇原战&quot;疫&quot;2021网络安全大赛_部分RE_WP</a></span></li>
+                                                <li><span class="file"><a href="thread/1543077/thread.html" target="threadtarget">Pwn格式化字符漏洞详细分析（第五空间2019决赛PWN5）</a></span></li>
+                                                <li><span class="file"><a href="thread/1544590/thread.html" target="threadtarget">pwn 64位构造libc获取sh踩坑（例题pwn_100）</a></span></li>
+                                                <li><span class="file"><a href="thread/1545194/thread.html" target="threadtarget">【L3HCTF】double-joy引出的解VM类题型新思路</a></span></li>
+                                                <li><span class="file"><a href="thread/1546046/thread.html" target="threadtarget">L3HCTF 部分RE WP</a></span></li>
+                                                <li><span class="file"><a href="thread/1548533/thread.html" target="threadtarget">混合布尔算术运算的混淆及反混淆</a></span></li>
+                                                <li><span class="file"><a href="thread/1551240/thread.html" target="threadtarget">2021GFCTF RE部分WP</a></span></li>
+                                                <li><span class="file"><a href="thread/1553124/thread.html" target="threadtarget">2021NCTF RE_WP</a></span></li>
+                                                <li><span class="file"><a href="thread/1553158/thread.html" target="threadtarget">2021NCTF RE</a></span></li>
+                                                <li><span class="file"><a href="thread/1553639/thread.html" target="threadtarget">pwn-uaf-逻辑题</a></span></li>
+                                                <li><span class="file"><a href="thread/1553967/thread.html" target="threadtarget">Typora 授权解密与剖析</a></span></li>
+                                                <li><span class="file"><a href="thread/1555845/thread.html" target="threadtarget">xposed实战去除加菲猫广告</a></span></li>
+                                                <li><span class="file"><a href="thread/1556027/thread.html" target="threadtarget">wasm转c调用与封装至dll案例</a></span></li>
+                                                <li><span class="file"><a href="thread/1556177/thread.html" target="threadtarget">破解超星学习通人脸识别思路</a></span></li>
+                                                <li><span class="file"><a href="thread/1558636/thread.html" target="threadtarget">利用 networkx 解决CTF_RE 图最短路径问题</a></span></li>
+                                                <li><span class="file"><a href="thread/1565241/thread.html" target="threadtarget">某酷ckey签名生成算法系列--（一）参数生成来源分析</a></span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="closed"><span class="folder">【移动安全类】</span>
+                                            <ul id="folde32">
+                                                <li><span class="file"><a href="thread/1349099/thread.html" target="threadtarget">CVE-2020-27950 iOS内核信息泄露</a></span></li>
+                                                <li><span class="file"><a href="thread/1351606/thread.html" target="threadtarget">某APP 注册之uuid详解之从打开APP日志入手</a></span></li>
+                                                <li><span class="file"><a href="thread/1355522/thread.html" target="threadtarget">Android 动态修改Linker实现LD_PRELOAD全局库PLT Hook</a></span></li>
+                                                <li><span class="file"><a href="thread/1359243/thread.html" target="threadtarget">从零开始逆向分析APP系列----某航空APP协议分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1362420/thread.html" target="threadtarget">CVE-2019-8605 FROM UAF TO TFP0</a></span></li>
+                                                <li><span class="file"><a href="thread/1365268/thread.html" target="threadtarget">浅谈VMProtect 2.13.8 IAT修复</a></span></li>
+                                                <li><span class="file"><a href="thread/1366686/thread.html" target="threadtarget">Google CTF 2020 资格赛 reverse_android</a></span></li>
+                                                <li><span class="file"><a href="thread/1381225/thread.html" target="threadtarget">一种通用超简单的Android Java Native方法Hook，无需依赖任何Hook框架</a></span></li>
+                                                <li><span class="file"><a href="thread/1386178/thread.html" target="threadtarget">利用编译器优化干掉控制流平坦化flatten</a></span></li>
+                                                <li><span class="file"><a href="thread/1396626/thread.html" target="threadtarget">so文件动态加解密的CrackMe</a></span></li>
+                                                <li><span class="file"><a href="thread/1404176/thread.html" target="threadtarget">一个简单端侧可使用的 LLVM BC 虚拟机</a></span></li>
+                                                <li><span class="file"><a href="thread/1405917/thread.html" target="threadtarget">意外发现的Android硬核https抓包， 在多个app亲测ok, 自定义ssl也无用哦~</a></span></li>
+                                                <li><span class="file"><a href="thread/1408504/thread.html" target="threadtarget">DEX壳简单实现过程分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1414060/thread.html" target="threadtarget">XCTF黑客精神—Frida RPC爆破</a></span></li>
+                                                <li><span class="file"><a href="thread/1436845/thread.html" target="threadtarget">capstone2llvmir入门---如何把汇编转换为llvmir</a></span></li>
+                                                <li><span class="file"><a href="thread/1448384/thread.html" target="threadtarget">某虚拟定位 解锁教学</a></span></li>
+                                                <li><span class="file"><a href="thread/1455649/thread.html" target="threadtarget">【开源】BlackDex、新版指令回填脱壳，支持修复NOP</a></span></li>
+                                                <li><span class="file"><a href="thread/1460346/thread.html" target="threadtarget">CVE-2019-6447漏洞的利用</a></span></li>
+                                                <li><span class="file"><a href="thread/1465418/thread.html" target="threadtarget">(0626补充) 一封来自私信里的sos信号</a></span></li>
+                                                <li><span class="file"><a href="thread/1472169/thread.html" target="threadtarget">某锁机软件的so脱壳与逆向分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1474964/thread.html" target="threadtarget">某商超小程序加密算法解析</a></span></li>
+                                                <li><span class="file"><a href="thread/1476924/thread.html" target="threadtarget">某生鲜电商sign签名算法分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1484714/thread.html" target="threadtarget">利用angr去除混淆的优势，不足与实践</a></span></li>
+                                                <li><span class="file"><a href="thread/1484716/thread.html" target="threadtarget">某付宝APP之某加油小程序对称加解密算法解析</a></span></li>
+                                                <li><span class="file"><a href="thread/1485513/thread.html" target="threadtarget">基于lldb的trace脚本以及验证还原的算法的脚本</a></span></li>
+                                                <li><span class="file"><a href="thread/1486586/thread.html" target="threadtarget">实现简易安卓inlinehook</a></span></li>
+                                                <li><span class="file"><a href="thread/1489271/thread.html" target="threadtarget">ELF 导入表/导出表 加固原理分析与实现</a></span></li>
+                                                <li><span class="file"><a href="thread/1499227/thread.html" target="threadtarget">简易Android ARM&amp;ARM64 GOT Hook (一)</a></span></li>
+                                                <li><span class="file"><a href="thread/1505484/thread.html" target="threadtarget">大数据安全入门安卓r0capture的源码关键点跟踪</a></span></li>
+                                                <li><span class="file"><a href="thread/1508146/thread.html" target="threadtarget">大数据安全入门试炼2</a></span></li>
+                                                <li><span class="file"><a href="thread/1514662/thread.html" target="threadtarget">某外买APP设备指纹风控分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1518629/thread.html" target="threadtarget">基于linker实现so加壳技术上</a></span></li>
+                                                <li><span class="file"><a href="thread/1518633/thread.html" target="threadtarget">基于linker实现so加壳技术下</a></span></li>
+                                                <li><span class="file"><a href="thread/1526743/thread.html" target="threadtarget">基于linker实现so加壳补充-----从dex中加载so</a></span></li>
+                                                <li><span class="file"><a href="thread/1532826/thread.html" target="threadtarget">实战分析安卓中级题</a></span></li>
+                                                <li><span class="file"><a href="thread/1537069/thread.html" target="threadtarget">使用trace进行算法还原</a></span></li>
+                                                <li><span class="file"><a href="thread/1537322/thread.html" target="threadtarget">ppp买菜IOS版设备风控浅析与算法还原</a></span></li>
+                                                <li><span class="file"><a href="thread/1542726/thread.html" target="threadtarget">某东到家 app so signkeyV1 参数分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1546549/thread.html" target="threadtarget">最右 5.7.3 app sign aes 参数分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1547120/thread.html" target="threadtarget">某大厂生鲜超市加密协议分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1552146/thread.html" target="threadtarget">ES文件浏览器局域网传输文件分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1555004/thread.html" target="threadtarget">加菲猫 邀请协议-算法分析</a></span></li>
+                                            </ul>
+                                        <li class="closed"><span class="folder">【病毒与木马分析类】</span>
+                                            <ul id="folde33">
+                                                <li><span class="file"><a href="thread/1346531/thread.html" target="threadtarget">无文件挖矿分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1346660/thread.html" target="threadtarget">柠檬鸭（Lemon Duck）样本分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1367345/thread.html" target="threadtarget">GlobelImposter及C4H变种分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1371712/thread.html" target="threadtarget">魔改CobaltStrike：二开及后门生成分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1375318/thread.html" target="threadtarget">Emotet木马分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1380480/thread.html" target="threadtarget">新人第一次逆向CS生成exe木马</a></span></li>
+                                                <li><span class="file"><a href="thread/1392341/thread.html" target="threadtarget">记录最近与挖矿病毒的斗智斗勇（二）</a></span></li>
+                                                <li><span class="file"><a href="thread/1426936/thread.html" target="threadtarget">魔改CobaltStrike：协议全剖析</a></span></li>
+                                                <li><span class="file"><a href="thread/1447742/thread.html" target="threadtarget">一次恶意样本分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1452783/thread.html" target="threadtarget">TransparentTribe黑客组织对印度国防学院发起攻击</a></span></li>
+                                                <li><span class="file"><a href="thread/1461258/thread.html" target="threadtarget">在dll中写入恶意shellcode的实验分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1473464/thread.html" target="threadtarget">魔改CobaltStrike：beacon浅析(下)</a></span></li>
+                                                <li><span class="file"><a href="thread/1476491/thread.html" target="threadtarget">VPN客户端访问日志_内部访问出错_2021年4月15日样本分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1485004/thread.html" target="threadtarget">一次对CryptoShield勒索软件的详细分析报告</a></span></li>
+                                                <li><span class="file"><a href="thread/1529275/thread.html" target="threadtarget">Mydoom样本分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1532776/thread.html" target="threadtarget">新型活跃Mozi样本分析报告</a></span></li>
+                                                <li><span class="file"><a href="thread/1537247/thread.html" target="threadtarget">一个基于Mirai的僵尸网络分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1538924/thread.html" target="threadtarget">臭名昭著的Nefilim勒索团伙样本分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1540416/thread.html" target="threadtarget">多层Android锁机样本分析3</a></span></li>
+                                                <li><span class="file"><a href="thread/1541144/thread.html" target="threadtarget">Emotet银行家木马的分析与检测</a></span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="closed"><span class="folder">【逆向与调试类】</span>
+                                            <ul id="folde34">
+                                                <li><span class="file"><a href="thread/1353886/thread.html" target="threadtarget">开源一个IDA小插件：修复VMP dump导入函数</a></span></li>
+                                                <li><span class="file"><a href="thread/1354077/thread.html" target="threadtarget">Win10 蓝屏Bug分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1357783/thread.html" target="threadtarget">使用usb3.0 调试Windows 10</a></span></li>
+                                                <li><span class="file"><a href="thread/1360319/thread.html" target="threadtarget">修改电脑机器码Hwid Spoofer</a></span></li>
+                                                <li><span class="file"><a href="thread/1360548/thread.html" target="threadtarget">shellcode免杀框架内附SysWhispers2_x86直接系统调用</a></span></li>
+                                                <li><span class="file"><a href="thread/1379718/thread.html" target="threadtarget">InfinityHook 事件逆向</a></span></li>
+                                                <li><span class="file"><a href="thread/1386972/thread.html" target="threadtarget">从项目中看BypassUAC和BypassAMSI</a></span></li>
+                                                <li><span class="file"><a href="thread/1391583/thread.html" target="threadtarget">给抓猫游戏开天劫</a></span></li>
+                                                <li><span class="file"><a href="thread/1399142/thread.html" target="threadtarget">从零开始的Linux堆利用(一)——House of Force</a></span></li>
+                                                <li><span class="file"><a href="thread/1400371/thread.html" target="threadtarget">从零开始pwn掉一台古董路由器</a></span></li>
+                                                <li><span class="file"><a href="thread/1400918/thread.html" target="threadtarget">Freefloat FTP Server1.0栈溢出漏洞分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1402862/thread.html" target="threadtarget">从零开始的Linux堆利用(二)——Fastbin Dup</a></span></li>
+                                                <li><span class="file"><a href="thread/1404054/thread.html" target="threadtarget">x64平台下inline hook的原理、实现与防御</a></span></li>
+                                                <li><span class="file"><a href="thread/1410060/thread.html" target="threadtarget">某(dewu)毒app的newSign分析过程</a></span></li>
+                                                <li><span class="file"><a href="thread/1415096/thread.html" target="threadtarget">保护模式笔记一 保护模式介绍</a></span></li>
+                                                <li><span class="file"><a href="thread/1416459/thread.html" target="threadtarget">PCMan FTP Server缓冲区溢出CVE-2013-4730漏洞分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1424863/thread.html" target="threadtarget">从零开始的Linux堆利用(三)——Fastbin_dup练习</a></span></li>
+                                                <li><span class="file"><a href="thread/1425113/thread.html" target="threadtarget">CVE-2017-4918 复现记录</a></span></li>
+                                                <li><span class="file"><a href="thread/1426244/thread.html" target="threadtarget">【原创】TP驱动保护分析系列一 定位TenProtect保护</a></span></li>
+                                                <li><span class="file"><a href="thread/1430344/thread.html" target="threadtarget">从零开始的Linux堆利用(四)——Unsafe Unlink</a></span></li>
+                                                <li><span class="file"><a href="thread/1432590/thread.html" target="threadtarget">【原创】反调试实战系列一 x64dbg+IDA 过IsDebuggerPresent</a></span></li>
+                                                <li><span class="file"><a href="thread/1439734/thread.html" target="threadtarget">CVE-2021-3156调试分享</a></span></li>
+                                                <li><span class="file"><a href="thread/1448188/thread.html" target="threadtarget">从零开始的Linux堆利用(五)——Safe Unlink</a></span></li>
+                                                <li><span class="file"><a href="thread/1451677/thread.html" target="threadtarget">逆向360hookport驱动学习</a></span></li>
+                                                <li><span class="file"><a href="thread/1452575/thread.html" target="threadtarget">360Safe驱动学习笔记和实现源码</a></span></li>
+                                                <li><span class="file"><a href="thread/1455086/thread.html" target="threadtarget">机械键盘USB协议逆向和利用</a></span></li>
+                                                <li><span class="file"><a href="thread/1467962/thread.html" target="threadtarget">从零开始的Linux堆利用(六)——Unsortedbin Attack</a></span></li>
+                                                <li><span class="file"><a href="thread/1481677/thread.html" target="threadtarget">【封神台】upload-labs wp</a></span></li>
+                                                <li><span class="file"><a href="thread/1482372/thread.html" target="threadtarget">【封神台】Sql-Labs wp</a></span></li>
+                                                <li><span class="file"><a href="thread/1483577/thread.html" target="threadtarget">【封神台】数据库注入 wp</a></span></li>
+                                                <li><span class="file"><a href="thread/1487207/thread.html" target="threadtarget">WebSockets逆向初体验（一）</a></span></li>
+                                                <li><span class="file"><a href="thread/1496951/thread.html" target="threadtarget">初探Windows调试原理和反附加手段</a></span></li>
+                                                <li><span class="file"><a href="thread/1497391/thread.html" target="threadtarget">vx逆向分析随笔</a></span></li>
+                                                <li><span class="file"><a href="thread/1513032/thread.html" target="threadtarget">Js 逆向之补环境到底是在补什么？</a></span></li>
+                                                <li><span class="file"><a href="thread/1525669/thread.html" target="threadtarget">系统调用(R3API调用过程详解)</a></span></li>
+                                                <li><span class="file"><a href="thread/1539815/thread.html" target="threadtarget">从零开始的Linux堆利用(七)——House of Orange</a></span></li>
+                                                <li><span class="file"><a href="thread/1546193/thread.html" target="threadtarget">从零开始的Linux堆利用(八)——Off By One</a></span></li>
+                                                <li><span class="file"><a href="thread/1546336/thread.html" target="threadtarget">利用procexp驱动突破PPL限制</a></span></li>
+                                                <li><span class="file"><a href="thread/1547575/thread.html" target="threadtarget">从零开始的Linux堆利用(九)——House of Spirit</a></span></li>
+                                                <li><span class="file"><a href="thread/1549711/thread.html" target="threadtarget">xx艺视频wasm转js分析，cmd5x算法脱离环境限制</a></span></li>
+                                                <li><span class="file"><a href="thread/1551294/thread.html" target="threadtarget">从零开始的Linux堆利用(十)——House of Lore</a></span></li>
+                                                <li><span class="file"><a href="thread/1558739/thread.html" target="threadtarget">从零开始的Linux堆利用(十一)——Off By NULL</a></span></li>
+                                                <li><span class="file"><a href="thread/1559890/thread.html" target="threadtarget">从零开始的Linux堆利用(十二)——House of Rabbit</a></span></li>
+                                                <li><span class="file"><a href="thread/1562783/thread.html" target="threadtarget">从零开始的Linux堆利用(十三)——堆风水</a></span></li>
+                                                <li><span class="file"><a href="thread/1569353/thread.html" target="threadtarget">从零开始的Linux堆利用(十四)——Tcache</a></span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="closed"><span class="folder">【数据解密类】</span>
+                                            <ul id="folde35">
+                                                <li><span class="file"><a href="thread/1358606/thread.html" target="threadtarget">白嫖9999天VIP会员，某APP之AES加解密+一些小分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1379690/thread.html" target="threadtarget">某5影视ts视频wasm加密分析(wasm逆向)</a></span></li>
+                                                <li><span class="file"><a href="thread/1454950/thread.html" target="threadtarget">清风DJ网下载地址(在线播放地址)获取方法</a></span></li>
+                                                <li><span class="file"><a href="thread/1461335/thread.html" target="threadtarget">某网站字幕加密的wasm分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1471146/thread.html" target="threadtarget">通过ast初步还原某js</a></span></li>
+                                                <li><span class="file"><a href="thread/1481326/thread.html" target="threadtarget">某成在线(某家云)获取真实视频地址</a></span></li>
+                                                <li><span class="file"><a href="thread/1482491/thread.html" target="threadtarget">极x壁纸 - 图片请求数据解密</a></span></li>
+                                                <li><span class="file"><a href="thread/1500700/thread.html" target="threadtarget">超详细!解包某知名Galgame(万华镜5)引擎——Galgame汉化中的逆向#Qlie引擎</a></span></li>
+                                                <li><span class="file"><a href="thread/1501397/thread.html" target="threadtarget">阿里云Web播放器，m3u8的ts文件解密下载过程实现</a></span></li>
+                                                <li><span class="file"><a href="thread/1531587/thread.html" target="threadtarget">[原创][首发]汇编语言实现DES加解密的完整代码</a></span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="closed"><span class="folder">【游戏安全类】</span>
+                                            <ul id="folde36">
+                                                <li><span class="file"><a href="thread/1357952/thread.html" target="threadtarget">战矛在线外挂制作经验分享（用脚本语言python+lua来节省分析时间）</a></span></li>
+                                                <li><span class="file"><a href="thread/1361473/thread.html" target="threadtarget">【原创】CE反汇编硬追基址之pvz僵尸数组头部</a></span></li>
+                                                <li><span class="file"><a href="thread/1362353/thread.html" target="threadtarget">从零开始教你做辅助(一)</a></span></li>
+                                                <li><span class="file"><a href="thread/1403797/thread.html" target="threadtarget">【vc】【笔记】游戏逆向分析和商业挂研究</a></span></li>
+                                                <li><span class="file"><a href="thread/1412936/thread.html" target="threadtarget">恶灵进化[Evolve Legacy] 游戏局域网化脱离Steam的思路记录以及一些问题</a></span></li>
+                                                <li><span class="file"><a href="thread/1415867/thread.html" target="threadtarget">2021腾讯游戏安全技术复赛pc客户端安全wp</a></span></li>
+                                                <li><span class="file"><a href="thread/1418111/thread.html" target="threadtarget">2021腾讯游戏安全技术竞赛PC客户端方向-思路分享</a></span></li>
+                                                <li><span class="file"><a href="thread/1468888/thread.html" target="threadtarget">赛尔号：通信协议逆向与模拟&amp;中间人攻击窃取登录凭证</a></span></li>
+                                                <li><span class="file"><a href="thread/1476723/thread.html" target="threadtarget">【原创源码】【VB6】浅谈丘陵算法：一种用于Roguelike地图的随机生成算法</a></span></li>
+                                                <li><span class="file"><a href="thread/1478048/thread.html" target="threadtarget">Galgame汉化中的逆向（六）：动态汉化分析_以MAJIROv3引擎为例</a></span></li>
+                                                <li><span class="file"><a href="thread/1492105/thread.html" target="threadtarget">Galgame汉化中的逆向（特别篇一）：ArmArm64_ELF中汉化字符串超长修改方法</a></span></li>
+                                                <li><span class="file"><a href="thread/1532465/thread.html" target="threadtarget">自动扫雷</a></span></li>
+                                                <li><span class="file"><a href="thread/1541057/thread.html" target="threadtarget">写一个杀戮尖塔存档修改器</a></span></li>
+                                                <li><span class="file"><a href="thread/1568457/thread.html" target="threadtarget">Android应用内存外部读写方案研究 植物大战僵尸</a></span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="closed"><span class="folder">【春节红包活动参考答案】</span>
+                                            <ul id="folde37">
+                                                <li><span class="file"><a href="thread/1371527/thread.html" target="threadtarget">【2021春节】解题领红包之三 {Android 中级题}</a></span></li>
+                                                <li><span class="file"><a href="thread/1378708/thread.html" target="threadtarget">【2021春节】解题领红包之番外篇分析</a></span></li>
+                                                <li><span class="file"><a href="thread/1378761/thread.html" target="threadtarget">【2021春节】安卓中级题逆向总结</a></span></li>
+                                                <li><span class="file"><a href="thread/1380895/thread.html" target="threadtarget">【春节】解题领红包之三 {Android 中级题}解题过程分享</a></span></li>
+                                                <li><span class="file"><a href="thread/1383999/thread.html" target="threadtarget">【2021春节】Android中级题</a></span></li>
+                                                <li><span class="file"><a href="thread/1479899/thread.html" target="threadtarget">你的不足，我来补</a></span></li>
+                                            </ul>
+                                        </li>
+                                        <li class="closed"><span class="folder">【其他精品文章】</span>
+                                            <ul id="folde38">
+                                                <li><span class="file"><a href="thread/1363328/thread.html" target="threadtarget">Frida调试环境搭建</a></span></li>
+                                                <li><span class="file"><a href="thread/1369484/thread.html" target="threadtarget">你没看错：动手开发GUI简单操作系统（一）</a></span></li>
+                                                <li><span class="file"><a href="thread/1383635/thread.html" target="threadtarget">Python爬虫学习笔记</a></span></li>
+                                                <li><span class="file"><a href="thread/1391994/thread.html" target="threadtarget">PE文件笔记一 PE介绍</a></span></li>
+                                                <li><span class="file"><a href="thread/1398493/thread.html" target="threadtarget">MISC系列(51)--010 Editor模板编写入门</a></span></li>
+                                                <li><span class="file"><a href="thread/1459982/thread.html" target="threadtarget">【汉化教程】--第1课：批量文件目录扫描</a></span></li>
+                                                <li><span class="file"><a href="thread/1549467/thread.html" target="threadtarget">Windows进程线程详解</a></span></li>
+                                                <li><span class="file"><a href="thread/1554166/thread.html" target="threadtarget">一个简单的shellcode如何写</a></span></li>
+                                                <li><span class="file"><a href="thread/1567507/thread.html" target="threadtarget">PWN学习总结</a></span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="closed"><span class="folder">附录</span>
+                                    <ul>
+                                        <li><span class="file"><a href="html/appendix_01.html" target="threadtarget">附录一：爱盘——最硬核的破解工具大全</a></span></li>
+                                        <li><span class="file"><a href="html/appendix_02.html" target="threadtarget">附录二：关于公布本年度精华集的原文公告</a></span></li>
+                                        <li><span class="file"><a href="html/appendix_03.html" target="threadtarget">附录三：关零基础新手破解学习导航帖</a></span></li>
+                                        <li><span class="file"><a href="html/appendix_04.html" target="threadtarget">附录四：吾爱破解安卓逆向入门教程导航帖</a></span></li>
+                                        <li><span class="file"><a href="html/appendix_05.html" target="threadtarget">附录五：吾爱破解论坛官方入门教学培训资料下载</a></span></li>
+                                        <li><span class="file"><a href="html/appendix_06.html" target="threadtarget">附录六：吾爱破解论坛历年优秀、精华文章集锦</a></span></li>
+                                    </ul>
+                                </li>
+                                </li>
+                                <li><span class="file" style="padding-bottom: 50px"><a href="html/afterword.html" target="threadtarget">后记</a></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--拖动条-->
+                <div class="thread_darg"></div>
+                <!--正文区-->
+                <div style="padding: 0 2px 2px 0;">
+                    <iframe id="threadframe" class="thread_view" name="threadtarget" src=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: none;">
+        <iframe id="outattach" src="" frameborder="0" width="750px" height="600px"></iframe>
+    </div>
+    <div style="display: none;">
+        <iframe id="about" src="" frameborder="0" width="760" height="320"></iframe>
+    </div>
+    <div id="52pojie_Wecheat" style="display: none">
+        <img src="image/homepage/wx.png">
+    </div>
+    <div id="52pojie_bilibili" style="display: none">
+        <a href="javascript:bilibilionclick()">        <img src="image/homepage/bilibili.png"></a>
+    </div>
+</body>
+
+</html>

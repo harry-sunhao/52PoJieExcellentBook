@@ -1,0 +1,282 @@
+/*对齐到0*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*整个HTML铺满*/
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/*一级div铺满*/
+.pagebody{
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /*测试用背景色*/
+    transition: .3s;
+
+}
+
+
+/*以下是对二级div样式的设置*/
+
+/*这里是二级div标题头部及工具栏样式的设置*/
+
+/*二级div之标题头部及工具栏div样式的设置*/
+.head {
+    display: flex;
+    height: 90px;
+    /*标题头部及工具栏div的高度*/
+    /*min-height: 135px;*/
+    flex-direction: row;
+    align-items: center;
+    transition: .3s;
+    justify-content: space-between;
+}
+
+.head div {
+    /*flex: 1;*/
+    transition: .3s;
+}
+
+.head > img{
+    max-height: 90%;
+}
+
+/*右部为电子书工具栏*/
+.head_right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-right: 50px;
+}
+
+.head_right img {
+    display: block;
+    float: left;
+    margin-right: 12px;
+}
+
+.head_right ul {
+    display: flex;
+}
+
+.head_right li{
+    list-style:none;
+}
+
+#logoimg{
+    overflow: hidden;
+}
+
+
+
+/*二级div之文章目录树与文章浏览框样式的设置*/
+.thread {
+    height: calc(100% - 90px);
+    transition: .3s;
+}
+.thread div{
+    flex: 1;
+}
+.thread_body{
+    display: flex;
+    height: 100%;
+    /*文章目录树与文章浏览框div的高度*/
+}
+/*左侧目录树*/
+.thread_tree{
+    background-color: #494949;
+    height: 100%;
+    flex: 0 0 20%!important;
+    overflow:auto;
+    transition: .3s;
+    border-top: solid 1px #494949;
+}
+.thread_tree li{
+    list-style: none;
+}
+.thread_tree span, .thread_tree a {
+    word-break: keep-all;
+    width: max-content;
+}
+/*拖动条*/
+.thread_darg {
+    cursor: w-resize;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACOSURBVFhH7Ze7DYAwDEQjBkAMQUVBwwKMxmbALuxBfMQWUYKiSClo7kknOx/Da+NIBb1kDm3GqPkCM5htZpfcku1ZvUwS7CPoY3AX+5htxn6SfmyV2Bn6GJNGinRaf4MCFKAABShAAQpQgAIUoECNwKH11GpcWkHcA7trs00MkiW0GXgRpa8iAzOYJQWc80ZaFVv8Tyf5AAAAAElFTkSuQmCC) center center;
+    background-size: contain;
+    background-color: #f6f6f6;
+    background-repeat: no-repeat;
+    height: 100%;
+    flex: 0 0 .7% !important;
+    max-width: 10px;
+    min-width: 8px;
+    z-index: 2;
+    /*兼容手机拖拽事件*/
+    touch-action: none;
+}
+
+/*拖动时候的遮罩*/
+.thread_darg_cover {
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/*正文区*/
+.thread_view {
+    /*background-color: #faa700;*/
+    height: 100%;
+    width: 100%;
+}
+
+.file>a {
+    color: #f9f9f9;
+    text-decoration: none
+}
+
+.folder {
+    color: #f9f9f9;
+    text-decoration: none
+}
+
+
+
+
+.treeview .hover {
+    transition: .3s;
+}
+
+.file .hover {
+    transition: .3s;
+    color: #ffffff;
+}
+
+
+
+
+/*这里是工具栏的图标按钮的特效*/
+
+
+.head_right a {
+    display: block;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    transition: .5s;
+    margin: 0 2px;
+}
+
+
+.btn_homepage{
+    background-image: url('../image/button/home.png');
+}
+.btn_homepage:hover{
+    background-image: url('../image/button/homt_h.png');
+}
+.btn_refresh{
+    background-image: url('../image/button/refresh.png');
+}
+.btn_refresh:hover{
+    background-image: url('../image/button/refresh_h.png');
+}
+.btn_fullscreen{
+    background-image: url('../image/button/fullscreen.png');
+}
+.btn_fullscreen:hover{
+    background-image: url('../image/button/fullscreen_h.png');
+}
+.btn_expand{
+    background-image: url('../image/button/expand.png');
+}
+.btn_expand:hover{
+    background-image: url('../image/button/expand_h.png');
+}
+.btn_tree{
+    background-image: url('../image/button/tree.png');
+}
+.btn_tree:hover{
+    background-image: url('../image/button/tree_h.png');
+}
+.btn_eyeprot{
+    background-image: url('../image/button/eyeprot.png');
+}
+.btn_eyeprot:hover{
+    background-image: url('../image/button/eyeprot_h.png');
+}
+.btn_print{
+    background-image: url('../image/button/print.png');
+}
+.btn_print:hover{
+    background-image: url('../image/button/print_h.png');
+}
+.btn_about{
+    background-image: url('../image/button/about.png');
+}
+.btn_about:hover{
+    background-image: url('../image/button/about_h.png');
+}
+
+
+
+/*以下是护眼模式的颜色选择框的样式设置*/
+.eyeprotchoose{
+    display: none;
+    height: 30px;
+    background-color: #ffffff;
+    box-shadow: darkgrey -3px -3px 8px 0px;
+    margin-top: 5px;
+    position: absolute;
+    right: 5px;
+}
+
+
+.eyeprotchoose a{
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin: 5px 5px 5px 5px;
+}
+
+/*以下是外链附件保存界面的样式*/
+#outattach{
+    overflow: hidden;
+}
+
+/*
+@media only screen and (max-width: 677px) {
+    .head_right {
+        flex: 1 !important;
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    #logoimg{
+        display: none;
+    }
+    .head{
+        background: linear-gradient(#ffffffcc, #ffffffcc), url(../image/logo.png) no-repeat center;
+    }
+    .blank1{
+        display: none;
+    }
+    .jinghuaji{
+        padding-left: 15px;
+    }
+}
+
+.blank1,.blank2{
+    display: block;
+}*/
+
+.jinghuaji{
+    padding: 0;
+}

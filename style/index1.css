@@ -1,0 +1,214 @@
+/*对齐到0*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*整个HTML铺满*/
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/*一级div铺满*/
+.pagebody{
+    width:100%;
+    height: 100%;
+    background: yellow;                                     /*测试用背景色*/
+}
+
+
+/*以下是对二级div样式的设置*/
+
+/*这里是二级div标题头部及工具栏样式的设置*/
+
+/*二级div之标题头部及工具栏div样式的设置*/
+.head{
+    display: flex;
+    flex-direction: column;
+    height: 13%;                                            /*标题头部及工具栏div的高度*/
+}
+.head div{
+    flex: 1;
+}
+.head_body{
+    width: 100%;
+    min-width: 1200px;
+    height: 148px;
+    background: #fff;
+    background-image: url(../image/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_body div{
+    margin:0;
+    padding:0;
+}
+
+
+/*左部放“精华集”字样*/
+.head_left{
+    /*background-color: #ff0000;                            测试用背景色，请去掉后再测试*/
+    width: 340px;
+    float: left;
+    text-align: right;
+}
+/*右部为电子书工具栏*/
+.head_right{
+    /*background-color: #0000ff;                          测试用背景色，请去掉后再测试*/
+    width: 340px;
+    float:right;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*二级div之文章目录树与文章浏览框样式的设置*/
+.thread{
+    flex-direction: column;
+    background-color: #66ccff;
+    height: 86%;
+}
+.thread div{
+    flex: 1;
+}
+.thread_body{
+    display: flex;
+    height: 100%; /*文章目录树与文章浏览框div的高度*/
+}
+/*左侧目录树*/
+.thread_tree{
+    background-color: #494949;
+    height: 100%;
+    flex: 0 0 20%!important;
+    overflow:auto;
+}
+/*拖动条*/
+.thread_darg{
+    background-color: #cc3399;
+    height: 100%;
+    flex: 0 0 .7%!important;
+}
+/*正文区*/
+.thread_view{
+    background-color: #faa700;
+    height: 100%;
+    width: 100%;
+ }
+
+.file>a{
+    color: #f9f9f9;
+    text-decoration:none
+}
+.folder{
+    color: #f9f9f9;
+    text-decoration:none
+}
+
+.treeview .hover {
+    transition: .3s;
+}
+
+.file .hover {
+    transition: .3s;
+    color: #ffffff;
+}
+
+
+
+/*这里是工具栏的图标按钮的特效*/
+
+.head_right li{
+    list-style: none;
+    float: left;
+    padding-top: 50px;
+}
+
+.head_right a{
+    display: block;
+    width: 37px;
+    height: 27px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    transition: .5s;
+}
+
+
+.btn_homepage{
+    background-image: url('../image/button/home.png');
+}
+.btn_homepage:hover{
+    background-image: url('../image/button/homt_h.png');
+}
+.btn_refresh{
+    background-image: url('../image/button/refresh.png');
+}
+.btn_refresh:hover{
+    background-image: url('../image/button/refresh_h.png');
+}
+.btn_fullscreen{
+    background-image: url('../image/button/fullscreen.png');
+}
+.btn_fullscreen:hover{
+    background-image: url('../image/button/fullscreen_h.png');
+}
+.btn_expand{
+    background-image: url('../image/button/expand.png');
+}
+.btn_expand:hover{
+    background-image: url('../image/button/expand_h.png');
+}
+.btn_tree{
+    background-image: url('../image/button/tree.png');
+}
+.btn_tree:hover{
+    background-image: url('../image/button/tree_h.png');
+}
+.btn_eyeprot{
+     background-image: url('../image/button/eyeprot.png');
+    margin-bottom: 10px;
+ }
+.btn_eyeprot:hover{
+    background-image: url('../image/button/eyeprot_h.png');
+}
+.btn_print{
+    background-image: url('../image/button/print.png');
+}
+.btn_print:hover{
+    background-image: url('../image/button/print_h.png');
+}
+.btn_about{
+    background-image: url('../image/button/about.png');
+}
+.btn_about:hover{
+    background-image: url('../image/button/about_h.png');
+}
+
+
+
+/*以下是护眼模式的颜色选择框的样式设置*/
+
+.eyeprotchoose{
+    height: 20px;
+    background-color: #ffffff;
+    box-shadow: darkgrey -3px -3px 8px 0px;
+    margin-top: 5px;
+    position: relative;
+
+}
+.eyeprotchoose a{
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin: 3px 3px 3px 3px;
+
+
+
+ }

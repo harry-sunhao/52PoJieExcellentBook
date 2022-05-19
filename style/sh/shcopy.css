@@ -1,0 +1,21 @@
+/*以下是复制代码按钮的外观设置*/
+
+/*此处为按钮正常状态的效果*/
+a.shcopy:link {
+    color: #494949;
+    border: 1px solid #494949;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 10px;
+    transition: .5s;
+}
+/*此处为按钮高亮状态的效果*/
+a.shcopy:hover {
+    background-color: #494949;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 10px;
+}

@@ -1,0 +1,68 @@
+a{
+    transition: .5s;
+}
+a:link {
+    color: #1373ca; /*正常*/
+}
+
+a:visited {
+    color: #1373ca; /*已浏览*/
+}
+
+a:hover {
+    color: #ff0000; /*当前*/
+}
+
+a:active {
+    color: #ff0000; /*鼠标滑过*/
+}
+img{
+    border-right: #2f3238 solid 1px;
+}
+span{
+    line-height:140%;
+    font-size: 10pt;
+}
+.about{
+    display: flex;
+    flex-direction: row;
+
+}
+.about_left{
+    padding: 20px 10px 20px 10px;
+    min-width: 150px;
+
+
+}
+.about_right{
+    min-width: 550px;
+}
+.title{
+    display:block;
+    text-align: center;
+    font-size: x-large;
+}
+.staff{
+    border: 2px dashed #494949;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;;
+
+}
+
+.about_btn {
+    color: #494949;
+    border: 1px solid #494949;
+    padding: 4px 8px;
+    border-radius: 18px;
+    text-decoration: none;
+    float: right;
+    cursor: pointer;
+    transition: .5s;
+}
+.about_btn {
+    background-color: #494949;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 18px;
+    text-decoration: none;
+}
