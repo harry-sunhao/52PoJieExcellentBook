@@ -3,13 +3,18 @@
 
 try {
   const { remote } = require('electron')
-} catch (error) {
-  console.error(error);
+} catch {
+	
 }
 window.onload=function () {
+	try {
 	const win = remote.getCurrentWindow();
 	win.setSize(1000, 1000);
 	//win.setTitle("吾爱破解精华集 2021 v1.0 2022年5月19日19:07:41");
+} catch {
+	
+}
+
     $("#threadframe").attr('src', 'html/homepage.html');
 
     var frameWidow = $("#threadframe")[0].contentWindow;
