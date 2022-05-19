@@ -155,7 +155,12 @@ function failed() {
 
 
 function copyCode(a) {
-    a = a.parentElement.parentElement.querySelector(".hljs,div[id*=highlighter_]");
+    a = $(a).parent().next();
+    if(a.length<0){
+        failed()
+        return
+    }
+    a=a[0].querySelector(".hljs,div[id*=highlighter_]")
     var input = document.createElement("textarea"),
         code = a.className.includes("hljs") ? a.innerText : (a.querySelector(".container").innerText);
     input.innerHTML = code;
