@@ -1,27 +1,21 @@
 const {
     app,
-    BrowserWindow
+    BrowserWindow,
+	Notification,
+	shell,
+	Menu,
+    MenuItem,
+	globalShortcut,
+	screen
 } = require('electron')
-    const {
-    shell
-} = require('electron')
-    const {
-    Notification
-} = require('electron');
-const {
-    Menu,
-    MenuItem
-} = require('electron');
-const {
-    globalShortcut
-} = require('electron');
+
 const ipcMain = require('electron').ipcMain;
 // 创建主窗口，设置了宽高等信息
 function createWindow() {
 
     mainWindow = new BrowserWindow({
-        width: 1280,
-        height: 600,
+        width: 1200,
+        height: 800,
         fullscreenable: true,
         webPreferences: {
             // node集成，即是否注入node能力
@@ -76,8 +70,11 @@ function createWindow() {
 	return mainWindow;
 }
 
-ipcMain.on('resize', function (event, height, width) {
-    console.log(height, width);
+ipcMain.on('resize', function (event, height_x, width_y) {
+	let size = screen.getPrimaryDisplay().workAreaSize
+	let height = parseInt(size.width * height_x)
+	let width = parseInt(size.height * width_y)
+	
     mainWindow.setSize(height, width);
     event.returnValue = 'success';
 });
